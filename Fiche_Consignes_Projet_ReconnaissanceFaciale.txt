@@ -1,0 +1,70 @@
+# 🧠 Projet Deep Learning : Reconnaissance Faciale avec MLP
+
+## 🎯 Objectif du projet
+Concevoir un modèle de reconnaissance faciale à l'aide d'un **Perceptron Multicouche (MLP)** uniquement, sans CNN, en travaillant sur le prétraitement, la régularisation, l’augmentation de données et l’interprétation des résultats.
+
+Maitriser pytorch
+---
+
+## 📚 Étapes à suivre
+
+### 1. Introduction
+- Décrire brièvement le but du projet.
+- Expliquer les applications de la reconnaissance faciale.
+
+### 2. Chargement et affichage des données
+- Charger les images (préorganisées par classe).
+- Afficher quelques images de chaque classe.
+
+### 3. Prétraitement des données
+- Redimensionner les images (ex: 64×64).
+- Aplatir les images (MLP ne traite pas des tensors 2D).
+- Normaliser les pixels (valeurs entre 0 et 1).
+- Encoder les étiquettes (One-Hot).
+
+### 4. Augmentation de données
+- Utiliser `ImageDataGenerator` pour effectuer : rotation, zoom, flip horizontal.
+- Visualiser les images transformées.
+
+### 5. Construction du modèle MLP
+- Construire un MLP avec au moins deux couches denses cachées.
+- Utiliser des fonctions d’activation ReLU.
+- Ajouter du **Dropout** pour éviter l’overfitting.
+- Utiliser `Softmax` en sortie.
+
+### 6. Entraînement du modèle
+- Utiliser `categorical_crossentropy`, `adam`, `accuracy`.
+- Tracer les courbes de perte et d’accuracy (entraînement/validation).
+
+### 7. Évaluation
+- Prédire sur les données de test.
+- Afficher la **matrice de confusion**.
+- Analyser les erreurs.
+
+### 8. Optimisation des hyperparamètres
+- Utiliser [Optuna](https://optuna.org) pour optimiser le nombre de neurones, le taux de dropout ou le learning rate.
+
+---
+
+## ✅ Barème suggéré
+
+| Éléments                        | Points |
+|--------------------------------|--------|
+| Prétraitement des données      | 2      |
+| Augmentation de données        | 2      |
+| MLP correctement défini        | 2      |
+| Dropout bien utilisé           | 1      |
+| Entraînement & visualisation   | 2      |
+| Évaluation & interprétation    | 3      |
+| Optuna pour tuning (bonus)     | +2     |
+| Bonus créatif (early stopping, etc.) | +1 |
+
+---
+
+## 💾 Envoi
+- Rendre le fichier `.ipynb` complété + un PDF exporté.
+- Nom du fichier : `PrenomNom_ProjetReconnaissanceFaciale_MLP.ipynb`
+- Presentation de votre solution avec un powerpoint
+- Date de presentation: 21 avril à 10h
+
+Bon courage !
